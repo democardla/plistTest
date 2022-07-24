@@ -19,7 +19,10 @@ class ViewController: UIViewController {
     
     
     var Menu = [String: Array<String>]()
-    var itemKey = "Foods"
+    var menuClasses = [String]()
+    var itemKey:String {
+        return menuClasses[]
+    }
     
     @IBOutlet weak var CountryPicker: UIPickerView!
     
@@ -29,14 +32,17 @@ class ViewController: UIViewController {
         CountryPicker.dataSource = self
         
     }
+    func linkToResource() {
+        let path = Bundle.main.path(forResource: "Menu", ofType: ".plist")
+        self.Menu = NSDictionary(contentsOfFile: path!)! as! Dictionary
+        self.menuClasses = Array(Menu.keys)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
-        let path = Bundle.main.path(forResource: "Menu", ofType: ".plist")
-
-        self.Menu = NSDictionary(contentsOfFile: path!)! as! Dictionary
+        linkToResource()
         
-        // Do any additional setup after loading the view.
+        
     }
 
 
@@ -49,7 +55,7 @@ extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource{
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         if component == 0 {
-            return Menu.count
+            return menuClasses.count
         } else {
             let kinds = Menu[itemKey]!.count
             return kinds
@@ -60,7 +66,7 @@ extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource{
         if component == 0 {
             self.itemKey = Array(Menu.keys)[row]
             return itemKey
-        } else if component == 1{
+        } else {
 //            let item = Menu[itemKey]
             return Menu[itemKey]![row]
         }
