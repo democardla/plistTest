@@ -18,6 +18,8 @@
 		C34DEF91288D3AD3008E47CA /* plistTestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34DEF90288D3AD3008E47CA /* plistTestUITestsLaunchTests.swift */; };
 		C34DEF9E288D3AF8008E47CA /* ChineseSubdivisions.plist in Resources */ = {isa = PBXBuildFile; fileRef = C34DEF9D288D3AF7008E47CA /* ChineseSubdivisions.plist */; };
 		C34DEFA0288D6B41008E47CA /* Menu.plist in Resources */ = {isa = PBXBuildFile; fileRef = C34DEF9F288D6B41008E47CA /* Menu.plist */; };
+		C34DEFA2288E4910008E47CA /* myDrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34DEFA1288E4910008E47CA /* myDrawView.swift */; };
+		C34DEFA42890FA87008E47CA /* myImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34DEFA32890FA87008E47CA /* myImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		C34DEF90288D3AD3008E47CA /* plistTestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = plistTestUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C34DEF9D288D3AF7008E47CA /* ChineseSubdivisions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ChineseSubdivisions.plist; sourceTree = "<group>"; };
 		C34DEF9F288D6B41008E47CA /* Menu.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Menu.plist; sourceTree = "<group>"; };
+		C34DEFA1288E4910008E47CA /* myDrawView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myDrawView.swift; sourceTree = "<group>"; };
+		C34DEFA32890FA87008E47CA /* myImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +116,8 @@
 				C34DEF9D288D3AF7008E47CA /* ChineseSubdivisions.plist */,
 				C34DEF7B288D3AD3008E47CA /* Info.plist */,
 				C34DEF9F288D6B41008E47CA /* Menu.plist */,
+				C34DEFA1288E4910008E47CA /* myDrawView.swift */,
+				C34DEFA32890FA87008E47CA /* myImageView.swift */,
 			);
 			path = plistTest;
 			sourceTree = "<group>";
@@ -266,8 +272,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C34DEFA42890FA87008E47CA /* myImageView.swift in Sources */,
 				C34DEF72288D3ACF008E47CA /* ViewController.swift in Sources */,
 				C34DEF6E288D3ACF008E47CA /* AppDelegate.swift in Sources */,
+				C34DEFA2288E4910008E47CA /* myDrawView.swift in Sources */,
 				C34DEF70288D3ACF008E47CA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

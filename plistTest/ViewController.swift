@@ -18,13 +18,15 @@ class ViewController: UIViewController {
 //    var Area = ""
     
     
+    @IBOutlet weak var myImageView: UIView!
     var Menu = [String: Array<String>]()
     var menuClasses = [String]()
-    var itemKey:String {
-        return menuClasses[]
-    }
+    var itemKey:String  = "Foods"
     
     @IBOutlet weak var CountryPicker: UIPickerView!
+    
+    @IBOutlet weak var myDrawView: UIView!
+    weak var myDrawView2: myDrawView?
     
     func setup() {
         
@@ -32,16 +34,25 @@ class ViewController: UIViewController {
         CountryPicker.dataSource = self
         
     }
+    
     func linkToResource() {
         let path = Bundle.main.path(forResource: "Menu", ofType: ".plist")
         self.Menu = NSDictionary(contentsOfFile: path!)! as! Dictionary
         self.menuClasses = Array(Menu.keys)
+        //先创建一个子uiview
+        let myDrawView = plistTest.myDrawView()
+        self.myDrawView.addSubview(myDrawView)
+//        self.myDrawView = myDrawView
+        myDrawView.isOpaque = true
+        myDrawView.isHidden = true
     }
+    
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
         linkToResource()
-        
         
     }
 
